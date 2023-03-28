@@ -1,5 +1,5 @@
 <nav id="mainNav" class="navbar fixed-top navbar-default navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="./index.php">DONATETHEBLOOD</a>
+  <a class="navbar-brand" href="./index.php">Sajilo LifeBank</a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -15,6 +15,10 @@
 
       <li class="nav-item">
         <a class="nav-link" href="index.php">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="donate.php">Donate</a>
       </li>
       
       <li class="nav-item">

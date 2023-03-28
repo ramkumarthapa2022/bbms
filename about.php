@@ -52,10 +52,10 @@
 			<h2 class="text-center">Our Vission</h2>
 			<hr class="red-bar">
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+			Our main vission is to ensure that there is a consistent and adequate supply of safe blood for patients in need. This system should be easy to use and accessible to all stakeholders involved in the blood donation process, including donors, healthcare professionals, and blood bank staff.
 			</p>
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+
 			</p>
 		</div>
 	</div>
@@ -70,10 +70,10 @@
 			<h2 class="text-center">Our Goal</h2>
 			<hr class="red-bar">
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+			Our main goal is to ensure the timely and efficient supply of safe blood and blood products to patients in need. It is optimize the blood donation process, ensure the safety of blood products, and improve patient outcomes through efficient and effective blood supply.
 			</p>
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+				
 			</p>
 		</div>
 		<div ><img src="img/target.png" alt="Our Vission" class="rounded img-fluid float-right"></div>
@@ -91,10 +91,10 @@
 			<h2 class="text-center">Our Mission</h2>
 			<hr class="red-bar">
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+			Our main mission is to ensure the safe, efficient, and effective collection, storage, testing, and distribution of blood and blood products to meet the needs of patients in a timely and cost-effective manner.
 			</p>
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+				
 			</p>
 		</div>
 	</div>
