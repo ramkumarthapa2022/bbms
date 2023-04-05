@@ -1,0 +1,14 @@
+    .col {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1;
+        margin: 10px;
+        min-width: 250px;
+        min-height: 250px;
+        max-width: 300px;
+        max-height: 800px;
+        border: 1px solid black;
+    }

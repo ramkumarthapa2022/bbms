@@ -1,13 +1,11 @@
 <?php
-$host = 'localhost'; // MySQL database host name
-$username = 'root'; // MySQL database username
-$password = ''; // MySQL database password
-$dbname = 'donatetheblood'; // MySQL database name
+$host = 'localhost';
+$username = 'root';
+$password = 'toor'; 
+$dbname = 'donatetheblood';
 
-// Create a database connection
 $conn = mysqli_connect($host, $username, $password, $dbname);
 
-// Check if the connection is successful
 if (!$conn) {
   die('Connection failed: ' . mysqli_connect_error());
 }

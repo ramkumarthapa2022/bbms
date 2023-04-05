@@ -2,7 +2,7 @@
 			<div class="container-fluid">					
 				<div class="row contactus">
 					<div class="col-md-6 offset-md-3">
-					<h1 class="text-center"><a href="certificate.php">Certified Yourself</a></h1></br>
+					<!--<h1 class="text-center"><a href="certificate.php">Certified Yourself</a></h1></br>-->
 					
 					<h1 class="text-center">Contact Us</h1>
 						<hr class="white-bar">
@@ -15,7 +15,7 @@
 
 							<div class="details">
 								 <p>   9869148791 <i class="fa fa-phone"></i>
-								    Cdyniranjan7321@gmail.com <i class="fa fa-envelope"></i>  
+								   <a href="https://mail.google.com/"> bsccsitsoch@gmail.com <i class="fa fa-envelope"></i>  
 								</p>
 							</div>
 

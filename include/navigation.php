@@ -23,16 +23,17 @@
         <a class="nav-link" href="donate.php">Donate</a>
       </li>
       
-      <li class="nav-item">
-        <a class="nav-link" href="donor.php">Donors</a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="search.php">Search</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="signin.php">Signin</a>
+        <a class="nav-link" href="signuppages.php">Sign Up</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="signin.php">Sign In</a>
       </li>
       
       <li class="nav-item">
