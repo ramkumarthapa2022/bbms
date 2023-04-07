@@ -32,7 +32,12 @@ if(isset($_SESSION['role_id']))
         } elseif ($_SESSION['role_id'] == 3) {
             include 'receptionistsnav.php';
         }
-    }else{
-        echo "Role Id not set.";
+        else
+        {   
+            echo "Role Id not set.";
+        }
+    }
+    else{
+        include 'navigation.php';
     }
 ?>
