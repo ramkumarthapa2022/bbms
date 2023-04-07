@@ -19,7 +19,6 @@
     if (!isset($_SESSION['role_id'])) {
     include 'navigation.php';
     }    
-
    
    // Check if the user is logged in
    if (isset($_POST['email']) && isset($_POST['password'])) {
