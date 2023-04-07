@@ -30,7 +30,7 @@ session_start();
        }
     elseif ($_SESSION['role_id'] == 3) 
        {
-         include ('receptionistsaction.php');
+         include ('receiveaction.php');
        }
    else
        {
