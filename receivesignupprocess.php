@@ -34,10 +34,10 @@ if (!empty($errors)) {
   echo "</ul>";
 } else {
   // If there are no errors, save the data to database
-  $host = 'localhost'; // Change this to your database host
-  $dbname = 'donatetheblood'; // Change this to your database name
-  $user = 'root'; // Change this to your database username
-  $pass = 'toor'; // Change this to your database password
+  $host = 'localhost';
+  $dbname = 'donatetheblood'; 
+  $user = 'root'; 
+  $pass = 'toor'; 
   $mysqli = new mysqli($host, $user, $pass, $dbname);
 
   // Check connection
