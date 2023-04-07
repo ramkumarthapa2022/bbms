@@ -18,13 +18,21 @@
     if (!isset($_SESSION['role_id'])) {
     include 'navigation.php';
     }    
-    session_start();
+   // session_start();
     
     // Check if the user is logged in
     if (isset($_SESSION['role_id'])) {
         // User is logged in, so get their role_id from the database
         $role_id = $_SESSION['role_id'];
-        $query = "SELECT role_id FROM users WHERE role_id = '$role_id'";
+        $query = "SELECT role_id FROM (
+            SELECT role_id FROM staff
+            UNION ALL
+            SELECT role_id FROM donor
+            UNION ALL
+            SELECT role_id FROM receptionists
+        ) AS users WHERE email=? AND password=?";
+        $result->bind_param("ss", $email, $password);
+        
         $result = mysqli_query($conn, $query);
         
         if (mysqli_num_rows($result) == 1) {

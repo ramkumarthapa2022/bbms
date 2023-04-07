@@ -35,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             SELECT email, password, id, role_id FROM receptionists
         ) AS users WHERE email=? AND password=?
         ");
-        echo "Query: " . $stmt->queryString . "<br>";
         $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
         $result = $stmt->get_result();
