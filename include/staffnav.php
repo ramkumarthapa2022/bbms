@@ -27,7 +27,18 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Staff Name<!-- Donor Name -->
+        <?php if(isset($_SESSION['loggedin'])) {
+  // Retrieve the donor name from the database based on the user ID
+  $id = $_SESSION['id'];
+  $query = "SELECT name FROM staff WHERE id = $id";
+  $result = mysqli_query($conn, $query);
+  if(mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $staff_name = $row['name'];
+  }
+}
+echo $staff_name; ?>
+<!-- Donor Name -->
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           

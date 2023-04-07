@@ -1,7 +1,6 @@
+
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+session_start();
 
 $host = 'localhost';
 $username = 'root';
@@ -38,12 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("ss", $email, $password);
         $stmt->execute();
         $result = $stmt->get_result();
-        if (!$stmt->execute()) {//checking
-            echo "Error: " . $stmt->error;
-        } else {
-            $result = $stmt->get_result();
-            // rest of the code
-        }//checking
+
         
         if ($result->num_rows > 0) {
             // set session variable and redirect to dashboard
