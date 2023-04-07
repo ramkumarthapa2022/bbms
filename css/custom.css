@@ -128,8 +128,8 @@ body{
 }
 .red-background{
 	background-color: #e74c3c;
-	min-height: 460px;
-	height: auto;
+	min-height: 40px;
+	height: 40px;
 	padding: 10px
 }
 

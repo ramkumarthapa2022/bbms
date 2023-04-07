@@ -1,40 +1,9 @@
-<?php 
+<?php include 'include/header.php' ?>
+<head>
+<link rel="stylesheet" type="text/css" href="signinstyle.css">
+</head>
 
-	//include header file
-	include ('include/header.php');
-
-?>
-
-<style>
-	.size{
-		min-height: 0px;
-		padding: 60px 0 60px 0;
-
-	}
-	h1{
-		color: white;
-	}
-	.form-group{
-		text-align: left;
-	}
-	h3{
-		color: #e74c3c;
-		text-align: center;
-	}
-	.red-bar{
-		width: 25%;
-	}
-	.form-container{
-		background-color: white;
-		border: .5px solid #eee;
-		border-radius: 5px;
-		padding: 20px 10px 20px 30px;
-		-webkit-box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
--moz-box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
-box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
-	}
-</style>
- <div class="container-fluid red-background size">
+<div class="container-fluid red-background size">
 	<div class="row">
 		<div class="col-md-6 offset-md-3">
 			<h1 class="text-center">SignIn</h1>
@@ -50,16 +19,40 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 		
 		<!-- Erorr Messages -->
 
-			<form action="" method="post" >
+			<form action="signinprocess.php" method="post" >
 				<div class="form-group">
-					<label for="email">Email/Phone no.</label>
-					<input type="text" name="email_phone" class="form-control" placeholder="Email Or Phone" required>
+					<label for="email">Email</label>
+					<input type="text" name="email" class="form-control" placeholder="Email" required>
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input type="password" name="password" placeholder="Password" required class="form-control">
+					<div class="input-group">
+					<input type="password" name="password" placeholder="Password" required class="form-control" id="password-input">
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<input type="checkbox" id="show-password-toggle">
+							<label for="show-password-toggle" id="show-password-label">Show</label>
+						</div>
+					</div>
+					</div>
 				</div>
-				<div class="form-group">
+				<script>
+    const passwordInput = document.getElementById('password-input');
+    const showPasswordToggle = document.getElementById('show-password-toggle');
+    const showPasswordLabel = document.getElementById('show-password-label');
+
+    showPasswordToggle.addEventListener('change', function() {
+        if (this.checked) {
+            passwordInput.type = 'text';
+            showPasswordLabel.innerHTML = 'Hide';
+        } else {
+            passwordInput.type = 'password';
+            showPasswordLabel.innerHTML = 'Show';
+        }
+    });
+</script>
+
+<div class="form-group">
 					<button class="btn btn-danger btn-lg center-aligned" type="submit" name="SignIn">SignIn</button>
 				</div>
 			</form>
