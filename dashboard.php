@@ -46,7 +46,7 @@ session_start();
   {
        if ($_SESSION['role_id'] == 2) 
        {
-           include '';
+           include 'license.php';
        }
      elseif($_SESSION['role_id'] == 1)
        {
