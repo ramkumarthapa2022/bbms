@@ -5,7 +5,7 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $password = $_POST["password"];
 $blood_type = $_POST["blood-type"];
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+//$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Validate form data (you may want to add more validation checks)
 $errors = array();
@@ -26,14 +26,7 @@ if (empty($blood_type)) {
 
 // If there are errors, display them
 if (!empty($errors)) {
-  echo "<h2>Please fix the following errors:</h2>";
-  echo "<ul>";
-  foreach ($errors as $error) {
-    echo "<li>$error</li>";
-  }
-  echo "</ul>";
 } else {
-  // If there are no errors, save the data to database
   $host = 'localhost';
   $dbname = 'donatetheblood'; 
   $user = 'root'; 
@@ -49,7 +42,7 @@ if (!empty($errors)) {
   $stmt = $mysqli->prepare("INSERT INTO receptionists (name, email, password, blood_type) VALUES (?, ?, ?, ?)");
 
   // Bind the parameters
-  $stmt->bind_param("ssss", $name, $email, $hashed_password, $blood_type);
+  $stmt->bind_param("ssss", $name, $email, $password, $blood_type);
 
   // Execute the statement
   if ($stmt->execute()) {

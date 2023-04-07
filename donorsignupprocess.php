@@ -29,12 +29,12 @@ if(
     $city = $_POST["city"];
     $password = $_POST["password"];
     $c_password = $_POST["c_password"];
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     
     // Insert data into table
     $sql = "INSERT INTO donor (name, blood_group, gender, birth_date, email, contact_no, city, password) 
-    VALUES ('$name', '$blood_group', '$gender', '$year-$month-$date', '$email', '$contact_no', '$city', '$hashed_password')";
+    VALUES ('$name', '$blood_group', '$gender', '$year-$month-$date', '$email', '$contact_no', '$city', '$password')";
 
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";

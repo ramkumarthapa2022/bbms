@@ -39,7 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = $stmt->get_result();
 
         
-        if ($result->num_rows > 0) {
+        if($result->num_rows>0)
+        {
             // set session variable and redirect to dashboard
             session_start();
             $_SESSION['loggedin'] = true;
@@ -55,7 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['role_id'] = $role_id;
             header("Location: dashboard.php");
             exit();
-        } else {
+        }
+        else
+        {
             echo "Incorrect email or password.";
         }
     }

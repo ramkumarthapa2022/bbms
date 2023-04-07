@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Hash the password for security
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+  //  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Connect to the database
     $db_host = "localhost";
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Insert the data into the database
-    $sql = "INSERT INTO staff (fullname, email, password) VALUES ('$fullname', '$email', '$hashed_password')";
+    $sql = "INSERT INTO staff (fullname, email, password) VALUES ('$fullname', '$email', '$password')";
 
     if (mysqli_query($conn, $sql)) {
         echo "Signup successful!";

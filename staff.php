@@ -1,16 +1,19 @@
 <?php
     include('include/header.php');
     include('include/config.php');
+    if (!isset($_SESSION)) {
+        
     session_start();
 
+    }
     if(isset($_POST['submit'])){
         $fullname = $_POST['fullname'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $confirm_password = $_POST['confirm_password'];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+      //  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO staff (fullname, email, password) VALUES ('$fullname', '$email', '$hashed_password')";
+        $sql = "INSERT INTO staff (fullname, email, password) VALUES ('$fullname', '$email', '$password')";
         $result = mysqli_query($conn, $sql);
 
         if($result){
@@ -27,13 +30,7 @@
         <div class="col-md-6 offset-md-3">
             <h1 class="text-center">Staff Signup</h1>
             <hr>
-
-            <?php if(isset($_SESSION['error'])) { ?>
-                <div class="alert alert-danger">
-                    <?php echo $_SESSION['error']; ?>
-                </div>
-            <?php unset($_SESSION['error']); } ?>
-
+            
             <form method="post">
                 <div class="form-group">
                     <label for="fullname">Full Name</label>
