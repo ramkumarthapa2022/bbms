@@ -14,7 +14,7 @@
 							</h1>
 
 							<div class="details">
-								 <p>   9869148791 <i class="fa fa-phone"></i>
+								 <p>   9812121212 <i class="fa fa-phone"></i>
 								   <a href="https://mail.google.com/"> bsccsitsoch@gmail.com <i class="fa fa-envelope"></i>  
 								</p>
 							</div>

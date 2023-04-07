@@ -83,8 +83,8 @@
 
 			<div class="container">
 				<div class="row">
-    				<div class="col">
-    					
+
+    				<div class="col">	
 					<div class="card">
      						<h3 class="text-center red">Our Vision</h3>
 								<img src="img/binoculars.png" alt="Our Vission" class="img img-responsive" width="168" height="168">
@@ -93,8 +93,7 @@
 								This system should be easy to use and accessible to all stakeholders involved in the blood donation process, including donors, 
 								healthcare professionals, and blood bank staff.
 								</p>
-					</div>
-    				
+						</div>
 					</div>
     				
     				<div class="col">
@@ -108,8 +107,7 @@
 								</p>
 						</div>
     				</div>
-    			<style>
-					</style>
+
     				<div class="col">
     					<div class="card">
       						<h3 class="text-center red">Our Mission</h3>

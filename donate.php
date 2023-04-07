@@ -4,8 +4,6 @@
 <?php 
   //include header file
   include ('include/header.php');
-  require 'donateerror.php';
-  
 ?>
 <!-- donate section -->
 <div class="container-fluid red-background">
