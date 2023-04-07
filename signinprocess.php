@@ -56,6 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             // set the session variables
             $_SESSION['id'] = $id;
+            $_SESSION['email']=$email;
+            $_SESSION['password']=$password;
             $_SESSION['role_id'] = $role_id;
             header("Location: dashboard.php");
             exit();
