@@ -15,7 +15,7 @@
 
         if($result){
             $_SESSION['success'] = "Staff account created successfully!";
-            header("Location: donor.php");
+            header("Location: signin.php");
         }else{
             $_SESSION['error'] = "Error: Unable to create staff account.";
         }

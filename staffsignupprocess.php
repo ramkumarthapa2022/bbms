@@ -41,3 +41,4 @@ if (isset($_POST['submit'])) {
     mysqli_close($conn);
 }
 ?>
+<a href="signin.php">Go to sign in</a>

@@ -30,10 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $conn->prepare("SELECT email, password, id, role_id FROM (
             SELECT email, password, id, role_id FROM staff
             UNION ALL
-            SELECT email, password,id, role_id FROM donor
+            SELECT email, password, id, role_id FROM donor
             UNION ALL
             SELECT email, password, id, role_id FROM receptionists
-        ) AS users WHERE email=$email AND password=$password
+        ) AS users WHERE email=? AND password=?
         ");
         echo "Query: " . $stmt->queryString . "<br>";
         $stmt->bind_param("ss", $email, $password);

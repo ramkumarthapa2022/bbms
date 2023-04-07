@@ -97,7 +97,7 @@
 		      $sql = "SELECT * FROM donor";
 			  $result = mysqli_query($conn,$sql);
 			  if(mysqli_num_rows($result)>0){
-				while($row= mysql_fetch_assoc($result)){
+				while($row= mysqli_fetch_assoc($result)){
 					if($row['save_life_date']=='0'){
 						echo'
 						        <div class="col-md-3 col-sm-12 col-lg-3 donors_data">

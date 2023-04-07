@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 //echo "Session started.<br>";
 
 // ... rest of the code ...
@@ -8,10 +8,10 @@
     include ('include/header.php');
 
     //check if user is logged in
-    if(!isset($_SESSION['id'])){
-        header("Location: signin.php");
-        exit;
-    }
+   // if(!isset($_SESSION['id'])){
+     //   header("Location: signin.php");
+       // exit;
+    //}
 
     //get user role from session
     $role_id = $_SESSION['role_id'];
