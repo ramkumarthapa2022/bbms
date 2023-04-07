@@ -34,8 +34,8 @@
 
 				<form class="form-group" action="donorsignupprocess.php" method="post" novalidate= "">
 					<div class="form-group">
-						<label for="fullname">Full Name</label>
-						<input type="text" name="name" id="fullname" placeholder="Full Name" required pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control">
+						<label for="name">Full Name</label>
+						<input type="text" name="name" id="name" placeholder="Full Name" required pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control">
 						
 					</div><!--full name-->
 					<div class="form-group">
@@ -80,7 +80,7 @@
             </div><!--End form-group-->
 			
 			<div class="form-group">
-						<label for="fullname">Email</label>
+						<label for="name">Email</label>
 						<input type="text" name="email" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please write correct email" class="form-control">
 					</div>
 					

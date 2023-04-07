@@ -43,9 +43,9 @@ echo $donor_name; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           
-          <a class="dropdown-item" href="user/donorindex.php"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+          <a class="dropdown-item" href="../donorprofile.php"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
 
-          <a class="dropdown-item" href="user/donorupdate.php"><i class="fa fa-edit" aria-hidden="true"></i>
+          <a class="dropdown-item" href="../donorupdate.php"><i class="fa fa-edit" aria-hidden="true"></i>
 Update Profile</a>
 
           <a class="dropdown-item" href="include/logout.php">

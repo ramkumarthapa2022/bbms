@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Blood Donor Certificate</title>
-	<link rel="stylesheet" type="text/css" href="styled.css"
+	<link rel="stylesheet" type="text/css" href="css/styled.css">
 </head>
 <body>
 	<h1>Blood Donor Certificate</h1>
@@ -21,6 +21,13 @@
 			<option value="AB+">AB+</option>
 			<option value="AB-">AB-</option>
 		</select>
+
+		<br><br>
+		<label for="date">Date of Donation:</label>
+		<input type="date" name="date" id="date" required>
+		<label for="amount">Amount Donated:</label>
+		<input type="number" name="amount" id="amount" required>
+		<br><br>
 		<br><br><input type="submit" name="generate" value="Generate Certificate"><br><br>
 	</form>
 </body>

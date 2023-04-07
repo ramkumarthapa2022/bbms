@@ -10,6 +10,11 @@ body {
 	margin: 50px auto;
 	max-width: 600px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.certificate:hover {
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 }
 
 h2 {
@@ -41,6 +46,7 @@ strong {
 		max-width: none;
 	}
 }
+
 .certificate {
 	margin: 0 auto;
 	padding: 20px;
@@ -61,13 +67,13 @@ strong {
 	margin-bottom: 20px;
 	text-align: justify;
 }
+
 .signature {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 
 .signature .name {
     border-top: 0.5px dotted #333;
@@ -87,6 +93,7 @@ strong {
 .signatory p:last-child {
 	margin-top: 10px;
 }
-.certificate p {
-	margin-bottom: 100px;
+
+.certificate p:last-child {
+	margin-bottom: 50px;
 }

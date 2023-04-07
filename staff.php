@@ -7,13 +7,13 @@
 
     }
     if(isset($_POST['submit'])){
-        $fullname = $_POST['fullname'];
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $confirm_password = $_POST['confirm_password'];
       //  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO staff (fullname, email, password) VALUES ('$fullname', '$email', '$password')";
+        $sql = "INSERT INTO staff (name, email, password) VALUES ('$name', '$email', '$password')";
         $result = mysqli_query($conn, $sql);
 
         if($result){
@@ -33,8 +33,8 @@
             
             <form method="post">
                 <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" class="form-control" id="fullname" name="fullname" required>
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>

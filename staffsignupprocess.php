@@ -2,7 +2,7 @@
 // Check if the form was submitted
 if (isset($_POST['submit'])) {
     // Retrieve form data
-    $fullname = $_POST['fullname'];
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Insert the data into the database
-    $sql = "INSERT INTO staff (fullname, email, password) VALUES ('$fullname', '$email', '$password')";
+    $sql = "INSERT INTO staff (name, email, password) VALUES ('$name', '$email', '$password')";
 
     if (mysqli_query($conn, $sql)) {
         echo "Signup successful!";

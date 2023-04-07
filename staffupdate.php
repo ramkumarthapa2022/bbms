@@ -12,10 +12,9 @@ session_start();
 
 
 <div class="button-row">
-  <a href="emailchange.php"><button class="btn btn-primary">Change Email</button>
-  <a href="phonechange.php"><button class="btn btn-secondary">Change Phone</button>
-  <a href="citychange.php"><button class="btn btn-success">Change City</button>
-  <a href="passwordchange.php"><button class="btn btn-success">Change Password</button>
+  <a href="semailchange.php"><button class="btn btn-primary">Change Email</button>
+  <a href="spasswordchange.php"><button class="btn btn-success">Change Password</button>
+  
 </div>
 <style>
     .button-row {
