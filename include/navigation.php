@@ -26,7 +26,7 @@
       
 
       <li class="nav-item">
-        <a class="nav-link" href="search.php">Search</a>
+        <a class="nav-link" href="signuppages.php">Search</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="signuppages.php">Sign Up</a>

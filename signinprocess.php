@@ -1,30 +1,19 @@
 
 <?php
 session_start();
-
-$host = 'localhost';
-$username = 'root';
-$password = 'toor'; 
-$dbname = 'donatetheblood';
-
-$conn = mysqli_connect($host, $username, $password, $dbname);
-
-if (!$conn) {
-  die('Connection failed: ' . mysqli_connect_error());
-}
+include 'include/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // get the email and password from the form
     $email = $_POST['email'];
     $password = $_POST['password'];
-    echo "Email: " . $email . "<br>";//check email
-    echo "Password: " . $password . "<br>";//
     // validate user input
     if (empty($email) || empty($password)) {
         echo "Email and password are required.";
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email address.";
-    } else {
+    } 
+    else {
         // authenticate user
         $stmt = $conn->prepare("SELECT email, password, id, role_id FROM (
             SELECT email, password, id, role_id FROM staff

@@ -24,6 +24,10 @@
       <li class="nav-item">
         <a class="nav-link" href="search.php">Search</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signuppages.php">Sign Up</a>
+       </li>
+      
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

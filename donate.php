@@ -91,19 +91,37 @@
 			</div><!--End form-group-->
 			
 					<div class="form-group">
-              <label for="city">City</label>
-              <select name="city" id="city" class="form-control demo-default" required>
-			  <option value="">-- Select --</option><optgroup title="kaski(pokhara)" label="&raquo; kaski(Pokhara)"></optgroup><option value="ranipauwa" >ranipauwa</option><option value="mahendrapool" >mahendrapool</option><option value="new road" >new road</option><option value="bagar" >bagar</option><option value="hospital chowk" >hospital chowk</option><option value="sarangkot" >sarangkot</option><option value="lakeside" >lakeside</option><option value="lekhnath" >lekhnath</option><option value="lamachaur" >lamachaur</option><optgroup title="kathmandu" label="&raquo; kathmandu"></optgroup><option value="kalanki" >kalanki</option><option value="balkhu" >balkhu</option><option value="kritipur" >kritipur</option><option value="swayambhu" >swayambhu</option><option value="sitapaila" >sitapaila</option><option value="balaju" >balaju</option><option value="pashupatinath" >pashupatinath</option><option value="boudha" >boudha</option><option value="new baneshwor" >new baneshwor</option><option value="basantapur" >basantapur</option><option value="patan" >patan</option><option value="new road" >new road</option><option value="bhaktapur" >bhaktapur</option><option value="lalitpur" >lalitpur</option>
-			  <option value="">-- Select --</option><optgroup title="Kaski(Pokhara)" label="&raquo; Kaski(Pokhara)"></optgroup><option value="Ranipauwa" >Ranipauwa</option><option value="Mahendrapool" >Mahendrapool</option><option value="New Road" >New Road</option><option value="Bagar" >Bagar</option><option value="Hospital chowk" >Hospital chowk</option><option value="Sarangkot" >Sarangkot</option><option value="Lakeside" >Lakeside</option><option value="Lekhnath" >Lekhnath</option><option value="Lamachaur" >Lamachaur</option><optgroup title="Kathmandu" label="&raquo; Kathmandu"></optgroup><option value="Kalanki" >Kalanki</option><option value="Balkhu" >Balkhu</option><option value=kritipur" >kritipur</option><option value="Swayambhu" >Swayambhu</option><option value="Sitapaila" >Sitapaila</option><option value="Balaju" >Balaju</option><option value="Pashupatinath" >Pashupatinath</option><option value="Boudha" >Boudha</option><option value="New Baneshwor" >New Baneshwor</option><option value="Basantapur" >Basantapur</option><option value="Patan" >Patan</option><option value="NewRoad" >NewRoad</option><option value="Bhaktapur" >Bhaktapur</option><option value="Lalitpur" >Lalitpur</option>
-	<optgroup title="Chitwan" label="&raquo; Chitwan"></optgroup><optgroup title="Dang" label="&raquo; Dang"></optgroup>
-	<optgroup title="Jhapa" label="&raquo; Jhapa"></optgroup>
-    <optgroup title="Palpa" label="&raquo; Palpa"></optgroup>
-	<optgroup title="Mustang" label="&raquo; Mustang"></optgroup>
-	<optgroup title="Dolpa" label="&raquo; Dolpa"></optgroup>
-	<optgroup title="Lamjung" label="&raquo; Lamjung"></optgroup>
-	<optgroup title="Myagdi" label="&raquo; Myagdi"></optgroup>
-</select>
-
+				<label for="city">City</label>
+				<select name="city" id="city" class="form-control demo-default" required>
+				<option value="">-- Select --</option>
+				<optgroup title="Kaski(Pokhara)" label="&raquo; Kaski(Pokhara)"></optgroup>
+				<option value="Ranipauwa" >Ranipauwa</option>
+				<option value="Mahendrapool" >Mahendrapool</option>
+				<option value="New Road" >New Road</option>
+				<option value="Bagar" >Bagar</option>
+				<option value="Hospital chowk" >Hospital chowk</option>
+				<option value="Sarangkot" >Sarangkot</option>
+				<option value="Lakeside" >Lakeside</option>
+				<option value="Lekhnath" >Lekhnath</option>
+				<option value="Lamachaur" >Lamachaur</option>						
+				<optgroup title="Kathmandu" label="&raquo; Kathmandu"></optgroup>
+				<option value="Kalanki" >Kalanki</option>
+				<option value="Balkhu" >Balkhu</option>
+				<option value=kritipur" >kritipur</option>
+				<option value="Swayambhu" >Swayambhu</option>
+				<option value="Sitapaila" >Sitapaila</option>
+				<option value="Balaju" >Balaju</option>
+				<option value="Pashupatinath" >Pashupatinath</option>
+				<option value="Boudha" >Boudha</option><option value="New Baneshwor" >New Baneshwor</option><option value="Basantapur" >Basantapur</option>
+				<option value="Patan" >Patan</option><option value="NewRoad" >NewRoad</option><option value="Bhaktapur" >Bhaktapur</option><option value="Lalitpur" >Lalitpur</option>
+				<optgroup title="Chitwan" label="&raquo; Chitwan"></optgroup><optgroup title="Dang" label="&raquo; Dang"></optgroup>
+				<optgroup title="Jhapa" label="&raquo; Jhapa"></optgroup>
+				<optgroup title="Palpa" label="&raquo; Palpa"></optgroup>
+				<optgroup title="Mustang" label="&raquo; Mustang"></optgroup>
+				<optgroup title="Dolpa" label="&raquo; Dolpa"></optgroup>
+				<optgroup title="Lamjung" label="&raquo; Lamjung"></optgroup>
+				<optgroup title="Myagdi" label="&raquo; Myagdi"></optgroup>
+				</select>
             </div><!--city end-->
 			
             <div class="form-group">

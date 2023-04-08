@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List Donors</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+		}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+		}
+		nav a {
+			color: #fff;
+			padding: 5px 10px;
+			text-decoration: none;
+			border: 1px solid #fff;
+			margin: 0 5px;
+			border-radius: 5px;
+			font-weight: bold;
+		}
+		main {
+			max-width: 800px;
+			margin: auto;
+			padding: 20px;
+		}
+		h2 {
+			margin-top: 0;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+		th, td {
+			padding: 10px;
+			border: 1px solid #333;
+		}
+		th {
+			background-color: #333;
+			color: #fff;
+			text-align: left;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}

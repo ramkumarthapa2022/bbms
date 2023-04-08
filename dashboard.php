@@ -75,7 +75,10 @@ session_start();
      {
           if ($_SESSION['role_id'] == 2) 
           {
-              include '';
+            ob_start();
+            include 'include/footer.php';
+            ob_end_clean();
+
           }
         elseif($_SESSION['role_id'] == 1)
           {
