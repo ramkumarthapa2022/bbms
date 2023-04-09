@@ -5,16 +5,6 @@ if(!isset($_SESSION))
 {
 session_start();
 }
-// Connect to the database
-//$servername = "localhost";
-//$username = "root";
-//$password = "toor";
-//$dbname = "donatetheblood";
-//$conn = new mysqli($servername, $username, $password, $dbname);
-//if ($conn->connect_error) {
-  //die("Connection failed: " . $conn->connect_error);
-//}
-
 // Check if user is logged in and is staff
 if (!isset($_SESSION['id']) || $_SESSION['role_id'] !== 2) {
     header('Location: signin.php');
@@ -57,6 +47,7 @@ $result = $conn->query($sql);
 				<th>Contact Number</th>
 				<th>Blood Group</th>
 				<th>City</th>
+				<th>Make changes</th>
 			</tr>
 			<?php
 			if ($result->num_rows > 0) {
@@ -68,6 +59,16 @@ $result = $conn->query($sql);
 					echo "<td>".$row["contact_no"]."</td>";
 					echo "<td>".$row["blood_group"]."</td>";
 					echo "<td>".$row["city"]."</td>";
+					echo "<td>";
+					echo "<form action='donordelete.php' method='POST'>";
+					echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+					echo "<button type='submit' name='delete'>Delete</button>";
+					echo "</form>";
+					echo "<form action='donorupdate.php' method='POST'>";
+					echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+					echo "<button type='submit' name='edit'>Change</button>";
+					echo "</form>";
+					echo "</td>";
 					echo "</tr>";
 				}
 			} else {

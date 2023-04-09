@@ -8,9 +8,6 @@ session_start();
 
 ?>
 
-
-
-
 <div class="button-row">
   <a href="emailchange.php"><button class="btn btn-primary">Change Email</button>
   <a href="phonechange.php"><button class="btn btn-secondary">Change Phone</button>

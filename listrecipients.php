@@ -44,6 +44,7 @@ $result = $conn->query($sql);
 				<th>Name</th>
 				<th>Email</th>
 				<th>Blood Group</th>
+				<th>Make changes</th>
 			</tr>
 			<?php
 			if ($result->num_rows > 0) {
@@ -53,6 +54,16 @@ $result = $conn->query($sql);
 					echo "<td>".$row["name"]."</td>";
 					echo "<td>".$row["email"]."</td>";
 					echo "<td>".$row["blood_type"]."</td>";
+					echo "<td>";
+					echo "<form action='receivedelete.php' method='POST'>";
+					echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+					echo "<button type='submit' name='delete'>Delete</button>";
+					echo "</form>";
+					echo "<form action='receiveupdate.php' method='POST'>";
+					echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+					echo "<button type='submit' name='edit'>Change</button>";
+					echo "</form>";
+					echo "</td>";
 					echo "</tr>";
 				}
 			} else {

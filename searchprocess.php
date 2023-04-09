@@ -26,7 +26,8 @@
 								<span>'.$row['gender'].'</span>
 								<span>'.$row['email'].'</span>
 								<span>'.$row['contact_no'].'</span>
-								<h4 class="name text-center">Donated</h4>
+								<h4 class="name text-center">Wants to donate</h4>
+								<>Send Email<>
 								</div>';
 				}
                 }
