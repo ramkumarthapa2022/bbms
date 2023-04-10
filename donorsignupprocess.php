@@ -1,17 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "toor";
-$dbname = "donatetheblood";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
+ include 'include/config.php';
+?>
+<?php
 if(
   isset($_POST["name"])//&&isset($_POST["blood_group"])&&isset($_POST["gender"])&&isset($_POST["day"])&&isset($_POST["month"])&&isset($_POST["year"])&&isset($_POST["email"])&&isset($_POST["contact"])&&isset($_POST["city"])&& isset($_POST["password"])
   ){
@@ -36,10 +27,22 @@ if(
     $sql = "INSERT INTO donor (name, blood_group, gender, birth_date, email, contact_no, city, password) 
     VALUES ('$name', '$blood_group', '$gender', '$year-$month-$date', '$email', '$contact_no', '$city', '$password')";
 
-    if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
-       
-    } 
+        if (mysqli_query($conn, $sql)) {
+            echo "New record created successfully";
+        $usernamesmtp="manga manga";
+        $passwordsmtp="manhua";
+        ini_set('SMTP','smtp.mailtrap.io');
+        ini_set('smtp_port',2525);
+        ini_set('smtp_user',$usernamesmtp);
+        ini_set('smtp_pass',$passwordsmtp);
+
+            // Send thank you message to donor
+            $to = $email;
+            $subject = "Thank you for signing up!";
+            $message = "Dear $name,\n\nThank you for signing up to donate blood. Your donation can save lives!\n\nBest regards,\nThe Blood Donation Team";
+            $headers = "From: ramkumarthapa2022@gmail.com";
+            mail($to, $subject, $message, $headers);
+        } 
     else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

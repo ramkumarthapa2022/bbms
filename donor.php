@@ -31,6 +31,9 @@
 								<span>'.$row['email'].'</span>
 								<span>'.$row['contact_no'].'</span>
 								<h4 class="name text-center">Wants to donate</h4>
+								<span><a href="mailto:' .$row['email'].'"class="btn btn-primary">
+								Email me</a></span>
+
 								</div>
 						           ';
 					}
