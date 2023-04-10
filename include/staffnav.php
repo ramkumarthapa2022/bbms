@@ -24,6 +24,10 @@
       <li class="nav-item">
         <a class="nav-link" href="search.php">Search</a>
       </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="listdonor.php">List Donor</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="signuppages.php">Sign Up</a>
        </li>

@@ -32,7 +32,6 @@ if (mysqli_num_rows($result) > 0) {
 
 // Close connection
 mysqli_close($conn);
-
 ?>
 </body>
 </html>

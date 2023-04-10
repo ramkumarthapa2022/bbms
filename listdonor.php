@@ -48,6 +48,7 @@ $result = $conn->query($sql);
 				<th>Blood Group</th>
 				<th>City</th>
 				<th>Make changes</th>
+				<th>Email me</th>
 			</tr>
 			<?php
 			if ($result->num_rows > 0) {
@@ -62,13 +63,19 @@ $result = $conn->query($sql);
 					echo "<td>";
 					echo "<form action='donordelete.php' method='POST'>";
 					echo "<input type='hidden' name='id' value='".$row["id"]."'>";
-					echo "<button type='submit' name='delete'>Delete</button>";
+					echo "<button type='submit' name='delete' class='btn btn-primary'>Delete</button>";
 					echo "</form>";
 					echo "<form action='donorupdate.php' method='POST'>";
 					echo "<input type='hidden' name='id' value='".$row["id"]."'>";
-					echo "<button type='submit' name='edit'>Change</button>";
+					echo "<button type='submit' name='edit' class='btn btn-primary'style='margin-top: 10px;'>Change</button>";
 					echo "</form>";
 					echo "</td>";
+					echo "<td>";
+					echo "<span><a href='mailto:" . $row['email'] . "' class='btn btn-primary'>Email me</a></span>";
+					echo "</td>";
+
+
+					
 					echo "</tr>";
 				}
 			} else {

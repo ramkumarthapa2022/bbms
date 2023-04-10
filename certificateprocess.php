@@ -4,7 +4,6 @@
 	<title>Certificate of Appreciation for Blood Donation</title>
 	<link rel="stylesheet" type="text/css" href="css/certificatestyle.css">
 	<style>
-		tyle>
 	table {
 		border-collapse: collapse;
 		width: 100%;

@@ -6,8 +6,10 @@
 </head>
 <body>
 	<h1>Blood Donor Certificate</h1>
-	<form method="POST" action="certified.php">
-		<label for="username"> Full Name:</label>
+	<form method="POST" action="certificateprocess.php">
+		<label for="organizer"> Donation Organizer:</label>
+		<input type="text" name="organizer" id="organizer" required>
+		<label for="username">Name of Donor:</label>
 		<input type="text" name="username" id="username" required>
 		<label for="bloodgroup">Blood Group:</label>
 		<select name="bloodgroup" id="bloodgroup" required>
@@ -22,13 +24,16 @@
 			<option value="AB-">AB-</option>
 		</select>
 
+		<label for="age"> Age of Donor:</label>
+		<input type="text" name="age" id="age" required>
+		
 		<br><br>
 		<label for="date">Date of Donation:</label>
 		<input type="date" name="date" id="date" required>
-		<label for="amount">Amount Donated:</label>
-		<input type="number" name="amount" id="amount" required>
 		<br><br>
-		<br><br><input type="submit" name="generate" value="Generate Certificate"><br><br>
+		<input type="submit" name="submit" value="Submit">
+		<input type="button" value="List Donors" onclick="window.location.href='donor_table.php';">
+		<input type="button" value="Next" onclick="window.location.href='certificate.php';">
 	</form>
 </body>
 </html>

@@ -42,8 +42,11 @@ $conn->close();
 		</div>
 		<div class="name">
 			<?php echo $row["name"]; ?>
-            <a href="dashboard.php">Go Back</a>
-            <a href="staffupdate.php">Make Changes</a>
+            <div class="button-block">
+			  <a href="dashboard.php" class="button-link">Go Back</a>
+ 			 <a href="staffupdate.php" class="button-link">Make Changes</a>
+			</div>
+
 		</div>
 	</div>
 </body>
