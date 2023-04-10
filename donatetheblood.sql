@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2023 at 08:55 AM
+-- Generation Time: Apr 10, 2023 at 03:46 PM
 -- Server version: 8.0.32
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `donatetheblood`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donationorganizer`
+--
+
+CREATE TABLE `donationorganizer` (
+  `id` int NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `date_of_launch` date NOT NULL,
+  `time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -46,8 +60,30 @@ CREATE TABLE `donor` (
 
 INSERT INTO `donor` (`id`, `name`, `blood_group`, `gender`, `birth_date`, `email`, `contact_no`, `city`, `password`, `role_id`) VALUES
 (5, 'Ram Thapa', 'A+', 'Male', '1972-08-14', 'ram@gmail.com', '9865656565', 'ranipauwa', '123456', 1),
-(6, 'prasanna banstola', 'B+', 'Male', '1969-02-13', 'prasanna@gmail.com', '9876465456', 'sitapaila', '987456', 1),
-(7, 'ram', 'A-', 'Male', '1959-06-05', 'ramk@gmail.com', '9865656565', 'kritipur', '147258', 1);
+(8, 'trafalgar', 'A+', 'Male', '1972-07-15', 'ramkumarthapa2022@gmail.com', '9806597605', 'Mahendrapool', 'ramkumar', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donor_data`
+--
+
+CREATE TABLE `donor_data` (
+  `id` int NOT NULL,
+  `organizer` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `bloodgroup` varchar(10) NOT NULL,
+  `age` int NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `donor_data`
+--
+
+INSERT INTO `donor_data` (`id`, `organizer`, `username`, `bloodgroup`, `age`, `date`) VALUES
+(1, 'jasdfhjs', 'ajdhfj', 'O+', 25, '2023-03-30'),
+(3, 'aoeifhj', 'aifjn', 'O+', 12, '2023-04-19');
 
 -- --------------------------------------------------------
 
@@ -94,11 +130,9 @@ CREATE TABLE `receptionists` (
 
 INSERT INTO `receptionists` (`id`, `name`, `email`, `password`, `blood_type`, `role_id`) VALUES
 (1, 'safhj', 'gautamhari332@gmail.com', 'Ram@12', 'AB+', 3),
-(2, 'safhj', 'gautamhari332@gmail.com', 'Ram@12', 'AB+', 3),
 (3, 'safhj', 'gautamhari332@gmail.com', 'Ram@12', 'AB+', 3),
-(4, 'safhjakfh', 'gautamhahfri332@gmail.com', 'Ram@12ashfa', 'B-', 3),
-(5, 'safhjakfh', 'gautamhahfri332@gmail.com', 'Ram@12ashfa', 'B-', 3),
-(6, 'kumar', 'kumar@gmail.com', '$2y$10$DkZR.NoWH84fDH4MpfOHy.1qQnEIVEy8g8T2Rh5/brMIZaYgnv/QW', 'A+', 3);
+(6, 'kumar', 'kumar@gmail.com', '$2y$10$DkZR.NoWH84fDH4MpfOHy.1qQnEIVEy8g8T2Rh5/brMIZaYgnv/QW', 'A+', 3),
+(7, 'Prasanna', 'prasanna.banstola@gmail.com', '123123', 'B+', 3);
 
 -- --------------------------------------------------------
 
@@ -130,7 +164,7 @@ INSERT INTO `roles` (`id`, `role_name`, `description`, `role_id`) VALUES
 
 CREATE TABLE `staff` (
   `id` int NOT NULL,
-  `fullname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role_id` int NOT NULL DEFAULT '2'
@@ -140,16 +174,18 @@ CREATE TABLE `staff` (
 -- Dumping data for table `staff`
 --
 
-INSERT INTO `staff` (`id`, `fullname`, `email`, `password`, `role_id`) VALUES
-(1, 'bkhn', 'jhbkhbkn@gj.vom', '$2y$10$vNAUl72uJqxWs.QV71QY/eEc0fHr2sGLXrXTEU/uxdOtmPR4cJ/jO', 2),
-(3, 'ram thapa', 'ram@gmail.com', '$2y$10$ZbERXaZ4eoCS1L8E1KuYH.RQQfkSVcOuTorEuDxc76.BQh9SpmD7G', 2),
-(5, 'ram thapa', 'ramk@gmail.com', '$2y$10$vVmT/WO6El.wz3yrecCdWuWU4xJhyLIN3TO/aRqT9OwFQNWzNJdEm', 2),
-(7, 'ram thapa', 'ramku@gmail.com', '$2y$10$cc6RGIUTwlbm7wKACt39aeJSfVme2PUOaWck9CMPOrso8ya3s4J8K', 2),
-(8, 'ram thapa', 'ramkum@gmail.com', '$2y$10$3hZtvFhCpYPr8tHo3vVw9uvbeoH.pXKJatidASY6cfyMkfxAXIjZG', 2);
+INSERT INTO `staff` (`id`, `name`, `email`, `password`, `role_id`) VALUES
+(18, 'ram thapa', 'ram@gmail.com', 'ramkumar', 2);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `donationorganizer`
+--
+ALTER TABLE `donationorganizer`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `donor`
@@ -157,6 +193,12 @@ INSERT INTO `staff` (`id`, `fullname`, `email`, `password`, `role_id`) VALUES
 ALTER TABLE `donor`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_donor_role` (`role_id`);
+
+--
+-- Indexes for table `donor_data`
+--
+ALTER TABLE `donor_data`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `permissions`
@@ -191,10 +233,22 @@ ALTER TABLE `staff`
 --
 
 --
+-- AUTO_INCREMENT for table `donationorganizer`
+--
+ALTER TABLE `donationorganizer`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `donor_data`
+--
+ALTER TABLE `donor_data`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -206,7 +260,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `receptionists`
 --
 ALTER TABLE `receptionists`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -218,7 +272,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables
