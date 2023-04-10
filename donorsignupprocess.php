@@ -40,7 +40,7 @@ if(
             $to = $email;
             $subject = "Thank you for signing up!";
             $message = "Dear $name,\n\nThank you for signing up to donate blood. Your donation can save lives!\n\nBest regards,\nThe Blood Donation Team";
-            $headers = "From: ramkumarthapa2022@gmail.com";
+            $headers = "From: mangamangamanhua@gmail.com";
             mail($to, $subject, $message, $headers);
         } 
     else {
