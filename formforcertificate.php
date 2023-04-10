@@ -33,7 +33,7 @@
 		<br><br>
 		<input type="submit" name="submit" value="Add donor to List">
 		<input type="button" value="List Donors" onclick="window.location.href='showdonortableprocess.php';">
-		<input type="button" value="Next" onclick="window.location.href='formforcertificate.php';">
+		
 	</form>
 </body>
 </html>

@@ -48,49 +48,81 @@
 </head>
 <body>
 	<?php
-	if(isset($_POST['generate'])) {
-		$username = $_POST['username'];
-		$bloodgroup = $_POST['bloodgroup'];
-		$date = $_POST['date'];
-		$amount = $_POST['amount'];
-		
-		// Generate certificate document
-		$certificate = "<div class='certificate'>
-			<h2>Certificate of Appreciation for Blood Donation</h2>
-			<p>&nbsp&nbsp&nbspThis is to certify that <strong>$username</strong> has donated blood of <strong>$bloodgroup</strong> group and has made a valuable contribution towards saving lives.
-			<table>
-				<tr>
-					<td>Date of Donation:</td>
-					<td>$date</td>
-				</tr>
-				<tr>
-					<td>Blood Group:</td>
-					<td>$bloodgroup</td>
-				</tr>
-				<tr>
-					<td>Amount Donated:</td>
-					<td>$amount</td>
-				</tr>
-				</table>
+include 'include/config.php';
 
-<br>This donation will help to save the lives of patients in need and has made a valuable contribution to the community. We thank you for your selfless act and encourage you to continue donating blood in the future.<br>
-			
-<table>
-<tr>
-  <td>[Signature]</td>
-  <td>[Organization Name]</td>
-  <td>[Address]</td>
-  <td>[Phone Number]</td>
-  <td>www.rcs.com.np</td>
-</tr>
-</table>
+// Query the donor data from the database
+$sql = "SELECT * FROM donor_data";
+$result = mysqli_query($conn, $sql);
+$sql2 = "SELECT organizer FROM donor_data WHERE id=1"; // assuming the organizer's name is stored in a table named 'organizers' and has an ID of 1
+$result2 = mysqli_query($conn, $sql2);
+$row2 = mysqli_fetch_assoc($result2);
+$organizer_name = $row2['organizer'];
 
+
+// Check if any data is returned
+if (mysqli_num_rows($result) > 0) {
+	// Loop through the donor data and generate a certificate for each donor
+	while ($row = mysqli_fetch_assoc($result)) {
+		echo "<div class='certificate'>
+		<label for='organizer'>Name of Organizer:</label>
+<span >".$row['organizer']."</span><br>
+
+		<h2 style='margin-bottom: 100px;'>Certificate of Appreciation for Blood Donation</h2>
+
+			<form method='post'>
+			<label for='username'>Name of Donor:</label>
+			<span>".$row['username']."</span><br>
 			
-			</p>
-		</div>";
-		// Display certificate
-		echo $certificate;
-	}
+
+					<label for='bloodgroup'>Blood Group:</label>
+					<span>".$row['bloodgroup']."</span><br>
+			
+					<label for='date'>Date of Donation:</label>
+					<span>".$row['date']."</span><br>
+			
+				</form>
+				<p>" . $organizer_name . " would like to express their sincere gratitude and appreciation to " . $row['username'] . " for their contribution in donating blood.</p>
+
+<br><p style='margin-bottom:100px;'>This donation will help to save the lives of patients in need and has made a valuable contribution to the community. We thank you for your selfless act and encourage you to continue donating blood in the future.<br></p>
+			
 	?>
+	<table>
+	<tr>
+	  <td>[Signature]</td>
+	  
+	  <td>[Signature]</td>
+	  <td><?php
+	  include 'include/config.php';
+	
+	  $sql = "SELECT * FROM donor_data";
+	$result = mysqli_query($conn, $sql);
+	$sql2 = "SELECT organizer FROM donor_data WHERE id=1"; // assuming the organizer's name is stored in a table named 'organizers' and has an ID of 1
+	$result2 = mysqli_query($conn, $sql2);
+	$row2 = mysqli_fetch_assoc($result2);
+	$organizer_name = $row2['organizer'];
+	
+	  
+	
+	  echo $organizer_name?></td>
+	  
+	  <td>[Organization Name]</td>
+	  <td>[Address]</td>
+	  <td>[Phone Number]</td>
+	  <td>www.rcs.com.np</td>
+	</tr>
+	</table>
+	
+				
+				</p>
+			</div>";
+		}
+	}else{
+		echo "No donor found.";
+	}
+	mysqli_close($conn);
+	
+
+
+
 </body>
 </html>

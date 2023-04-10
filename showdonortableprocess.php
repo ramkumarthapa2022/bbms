@@ -11,8 +11,15 @@ include 'include/config.php';
 // Query the donor data from the database
 $sql = "SELECT * FROM donor_data";
 $result = mysqli_query($conn, $sql);
-
+// Calculate total blood collected
+$total_bloodamount = 0;
+while ($row = mysqli_fetch_assoc($result)) {
+    $total_bloodamount += $row['bloodamount'];
+}
+$sql = "SELECT * FROM donor_data";
+$result = mysqli_query($conn, $sql);
 // Check if any data is returned
+
 if (mysqli_num_rows($result) > 0) {
     // Display the data in an HTML table
     echo "<table>";
@@ -33,8 +40,16 @@ if (mysqli_num_rows($result) > 0) {
     echo "No donor data found.";
 }
 
+
 // Close the database connection
 mysqli_close($conn);
 ?>
+<div class="center">
+<div class="button-box">
+<span class="total-blood">Total Blood Collected: <?php echo $total_bloodamount; ?> ml</span>
+  <a href="certificateprocess.php" class="generate-certificate-button">Generate Certificate</a>
+</div>
+</div>
+
 </body>
 <html>

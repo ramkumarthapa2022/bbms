@@ -4,6 +4,7 @@
 <head>
 <link rel="stylesheet" href="indexstyle.css">
 </head>
+
 <div class="container-fluid header-img">
 				<div class="row">
 					<div class="col-md-6 offset-md-3">
@@ -33,7 +34,10 @@
 			</div>
 			<!-- donate section -->
 			
-
+			<?php 
+				include 'eventsection.php';
+			?>
+		
 			<?php 
 				include 'donatesection.php';
 			?>

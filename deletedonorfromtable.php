@@ -9,7 +9,7 @@ $id = $_GET['id'];
 $sql = "DELETE FROM donor_data WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
     echo "Donor deleted successfully";
-    header("Location: index.php");
+    header("Location: showdonortableprocess.php");
     exit();
 } else {
     echo "Error deleting donor: " . mysqli_error($conn);
