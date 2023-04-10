@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Blood Donor Certificate</h1>
-	<form method="POST" action="certificateprocess.php">
+	<form method="POST" action="formforcertificateprocess.php">
 		<label for="organizer"> Donation Organizer:</label>
 		<input type="text" name="organizer" id="organizer" required>
 		<label for="username">Name of Donor:</label>
@@ -31,9 +31,9 @@
 		<label for="date">Date of Donation:</label>
 		<input type="date" name="date" id="date" required>
 		<br><br>
-		<input type="submit" name="submit" value="Submit">
-		<input type="button" value="List Donors" onclick="window.location.href='donor_table.php';">
-		<input type="button" value="Next" onclick="window.location.href='certificate.php';">
+		<input type="submit" name="submit" value="Add donor to List">
+		<input type="button" value="List Donors" onclick="window.location.href='showdonortableprocess.php';">
+		<input type="button" value="Next" onclick="window.location.href='formforcertificate.php';">
 	</form>
 </body>
 </html>
