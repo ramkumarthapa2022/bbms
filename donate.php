@@ -21,6 +21,8 @@
 					</div>
 				</div>
 			</div>
+
+<section>
 <div class="container size">
 	<div class="row">
 		<div class="col-md-6 offset-md-3 form-container">
@@ -146,7 +148,7 @@
 				</form>
 		</div>
 	</div>
-</div>
+</div></section>
 <?php
   include ('include/footer.php');
 ?>
