@@ -1,3 +1,6 @@
+<?php 
+	include ('include/header.php');
+?>
 <head>
   <link rel="stylesheet" type="text/css" href="receptionistactionstyle.css">
 </head>
